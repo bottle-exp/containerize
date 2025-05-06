@@ -1,0 +1,5 @@
+redis
+fastapi
+authlib
+uvicorn[standard]
+python-dotenv

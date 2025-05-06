@@ -1,0 +1,35 @@
+/* Default Theme (Dark Mode) */
+:root {
+  --navbar-bg: #17252a;
+  --navbar-text: #def2f1;
+  --logo-color: #3aafa9;
+  --logo-hover-color: #2b7a78;
+  --link-hover-color: #3aafa9;
+  --button-bg: #3aafa9;
+  --button-hover-bg: #2b7a78;
+  --button-text: #feffff;
+}
+
+/* Light Mode Theme */
+body.light-mode {
+  --navbar-bg: #feffff;
+  --navbar-text: #17252a;
+  --logo-color: #2b7a78;
+  --logo-hover-color: #3aafa9;
+  --link-hover-color: #2b7a78;
+  --button-bg: #2b7a78;
+  --button-hover-bg: #3aafa9;
+  --button-text: #feffff;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+  --navbar-bg: #17252a;
+  --navbar-text: #def2f1;
+  --logo-color: #3aafa9;
+  --logo-hover-color: #2b7a78;
+  --link-hover-color: #3aafa9;
+  --button-bg: #3aafa9;
+  --button-hover-bg: #2b7a78;
+  --button-text: #feffff;
+}

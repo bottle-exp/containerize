@@ -1,0 +1,40 @@
+version: "3.8"
+
+services:
+  redis:
+      image: redis:7
+      ports:
+        - "6379:6379"
+  auth_server:
+    build:
+      context: ./auth_server
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - redis
+  api_gateway:
+    build:
+      context: ./api_gateway
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    depends_on:
+      - auth_server
+      - service_a
+  service_a:
+    build:
+      context: ./service_a
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8002"
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    environment:
+      - NODE_ENV=development
